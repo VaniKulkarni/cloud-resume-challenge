@@ -42,6 +42,26 @@ Resources:
                 - /*
       Bucket: !Ref S3Bucket
 
+  CloudFrontDistribution:
+    Type: "AWS::CloudFront::Distribution"
+    Properties:
+      DistributionConfig:
+        DefaultCacheBehavior:
+          ViewerProtocolPolicy: allow-all
+          TargetOriginId: myS3Bucket
+          DefaultTTL: 0
+          MinTTL: 0
+          MaxTTL: 0
+          ForwardedValues:
+            QueryString: false
+        Origins:
+          - DomainName: first-cloud-resume.s3-website-us-east-1.amazonaws.com
+            Id: myS3Bucket
+            CustomOriginConfig:
+              OriginProtocolPolicy: match-viewer
+        Enabled: true
+        DefaultRootObject: index.html
+
   # S3BucketSecureURL:
   #   Value: !Join
   #     - ''

@@ -8,3 +8,9 @@ deploy-infra:
 
 deploy-site:
 	aws-vault exec vani1 --no-session -- aws s3 sync ./src/resume-site s3://first-cloud-resume
+
+deploy-steps:
+	sam init
+	sam build
+	sam deploy 
+	aws s3 sync ./src/resume-site s3://first-cloud-resume
