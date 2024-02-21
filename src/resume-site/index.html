@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume</title>
-    <link rel="stylesheet" href="styles.css">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      fetch("https://9cc4e0mzq8.execute-api.us-east-1.amazonaws.com/Prod/hello")
+        .then((response) => response.json())
+        .then(
+          (data) =>
+            (document.getElementById("VisitorsCount").innerText = data.count)
+        );
+    </script>
+  </head>
+  <body>
     <header>
-        <h1>Vani Kulkarni</h1>
-        <p>Synopsis</p>
+      <h1>Vani Kulkarni</h1>
+      <p>Synopsis</p>
+      <span id="VisitorsCount"> VisitorsCount here</span>
     </header>
     <section>
-        <h2>Roles and Responsibilities</h2>
-        <ul>
-            <li>Role 1</li>
-            <li>Role 2</li>
-            <li>Role 3</li>
-        </ul>
+      <h2>Roles and Responsibilities</h2>
+      <ul>
+        <li>Role 1</li>
+        <li>Role 2</li>
+        <li>Role 3</li>
+      </ul>
     </section>
     <section>
-        <h2>Project Details</h2>
-        <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-        </ul>
+      <h2>Project Details</h2>
+      <ul>
+        <li>Project 1</li>
+        <li>Project 2</li>
+        <li>Project 3</li>
+      </ul>
     </section>
-</body>
+  </body>
 </html>
