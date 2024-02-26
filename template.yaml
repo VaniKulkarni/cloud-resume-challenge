@@ -155,11 +155,11 @@ Outputs:
     Description: "API Gateway endpoint URL for Prod stage for getcount function"
     Value: "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/getcount/"
   GetCountFunction:
-    Description: "Hello World Lambda Function ARN"
-    Value: GetCountFunction.Arn
+    Description: "PutCountFunctionLambda Function ARN"
+    Value: PutCountFunction.Arn
   GetCountFunctionIamRole:
-    Description: "Implicit IAM Role created for getcount function"
-    Value: GetCountFunctionRole.Arn
+    Description: "Implicit IAM Role created for PutCountFunction function"
+    Value: PutCountFunction.Arn
   WebsiteURL:
     Value: !GetAtt
       - S3Bucket

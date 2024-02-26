@@ -14,3 +14,4 @@ deploy-steps:
 	sam build
 	sam deploy 
 	aws s3 sync ./src/resume-site s3://first-cloud-resume
+	aws s3 rm s3://first-cloud-resume --recursive

@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="styles.css" />
     <script>
       fetch(
-        "https://9cc4e0mzq8.execute-api.us-east-1.amazonaws.com/Prod/getcount"
+        "https://pm4bzwzn80.execute-api.us-east-1.amazonaws.com/Prod/getcount"
       )
         .then((response) => response.json())
         .then(
           (data) =>
-            (document.getElementById("VisitorsGetCount").innerText = data.count)
+            (document.getElementById("VisitorsGetCount").innerText = data)
         );
     </script>
 
     <script>
       fetch(
-        "https://9cc4e0mzq8.execute-api.us-east-1.amazonaws.com/Prod/putcount"
+        "https://pm4bzwzn80.execute-api.us-east-1.amazonaws.com/Prod/putcount"
       )
         .then((response) => response.json())
         .then(
