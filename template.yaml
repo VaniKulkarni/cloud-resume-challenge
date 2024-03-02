@@ -125,27 +125,27 @@ Resources:
             Path: /putcount
             Method: get
 
-  MyGetCountLambda:
-    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-    Properties:
-      CodeUri: ./src/backend/Get-Count/
-      Handler: GetCount::GetCount.Function::FunctionHandler
-      Runtime: dotnet6
-      Policies:
-        - DynamoDBCrudPolicy:
-            TableName: Cloud-Resume-Challenge
-      Architectures:
-        - x86_64
-      MemorySize: 256
-      Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
-        Variables:
-          PARAM1: VALUE
-      Events:
-        GetCount:
-          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
-          Properties:
-            Path: /getcount
-            Method: get
+  # MyGetCountLambda:
+  #   Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+  #   Properties:
+  #     CodeUri: ./src/backend/Get-Count/
+  #     Handler: GetCount::GetCount.Function::FunctionHandler
+  #     Runtime: dotnet6
+  #     Policies:
+  #       - DynamoDBCrudPolicy:
+  #           TableName: Cloud-Resume-Challenge
+  #     Architectures:
+  #       - x86_64
+  #     MemorySize: 256
+  #     Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
+  #       Variables:
+  #         PARAM1: VALUE
+  #     Events:
+  #       GetCount:
+  #         Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+  #         Properties:
+  #           Path: /getcount
+  #           Method: get
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function

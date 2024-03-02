@@ -33,18 +33,6 @@ namespace PutCount
             { "Access-Control-Allow-Credentials", "*" }
         };
 
-        private static async Task<string> GetCallingIP()
-        {
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Add("User-Agent", "AWS Lambda .Net Client");
-
-            var msg = await client
-                .GetStringAsync("http://checkip.amazonaws.com/")
-                .ConfigureAwait(continueOnCapturedContext: false);
-
-            return msg.Replace("\n", "");
-        }
-
         [LambdaSerializer(typeof(DefaultLambdaJsonSerializer))]
         public async Task<APIGatewayProxyResponse> FunctionHandler(
             APIGatewayProxyRequest request,
@@ -63,38 +51,10 @@ namespace PutCount
             {
                 RegionEndpoint = region,
             };
+
             var dbClient = new AmazonDynamoDBClient(clientConfig);
             Console.WriteLine($"dbClient: {dbClient}");
-            // var sub = request.RequestContext.Authorizer?.Claims["sub"];
-#nullable enable
-            string? output;
-#nullable disable
-
             var id = "VK";
-            var getRequest = new GetItemRequest
-            {
-                TableName = tableName,
-                Key = new Dictionary<string, AttributeValue>()
-                {
-                    {
-                        "Id",
-                        new AttributeValue { S = id }
-                    }
-                },
-            };
-            var getResponse = await dbClient.GetItemAsync(getRequest);
-            Console.WriteLine($"getResponse: {getResponse}");
-            var attributeMap = getResponse.Item;
-
-            if (attributeMap == null || attributeMap.Count == 0)
-            {
-                Console.WriteLine("attributeMap is null");
-            }
-            else
-            {
-                Console.WriteLine("attributeMap is NOT null");
-            }
-
             var updateRequest = new UpdateItemRequest
             {
                 TableName = tableName,
@@ -117,13 +77,42 @@ namespace PutCount
 
             Console.WriteLine("updateRequest being made");
             var updateResponse = await dbClient.UpdateItemAsync(updateRequest);
-            Console.WriteLine(updateResponse.HttpStatusCode);
-            output = $"Update db code {updateResponse.HttpStatusCode}";
+            Console.WriteLine(
+                $"updateResponse done, HttpStatusCode = {updateResponse.HttpStatusCode}"
+            );
+
+            var getRequest = new GetItemRequest
+            {
+                TableName = tableName,
+                Key = new Dictionary<string, AttributeValue>()
+                {
+                    {
+                        "Id",
+                        new AttributeValue { S = id }
+                    }
+                },
+            };
+            var getResponse = await dbClient.GetItemAsync(getRequest);
+            Console.WriteLine($"getResponse: {getResponse}");
+            Console.WriteLine($"getResponse done, HttpStatusCode = {getResponse.HttpStatusCode}");
+            var attributeMap = getResponse.Item;
+            int counter = 0;
+            if (attributeMap == null || attributeMap.Count == 0)
+            {
+                Console.WriteLine("attributeMap is null");
+            }
+            else
+            {
+                counter = Int32.Parse(attributeMap["VisitorCount"].N);
+                Console.WriteLine("attributeMap is NOT null");
+            }
 
             return new APIGatewayProxyResponse()
             {
                 StatusCode = 200,
-                Body = output ?? "(null)",
+                Body = JsonSerializer.Serialize(
+                    new Dictionary<string, string> { { "count", counter.ToString() } }
+                ),
                 Headers = ALL_HEADERS
             };
         }
