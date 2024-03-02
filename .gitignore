@@ -407,3 +407,4 @@ __pycache__/
 /.vscode
 /*.sln
 /*.toml
+/src/resume-site/package-lock.json

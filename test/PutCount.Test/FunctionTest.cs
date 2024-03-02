@@ -8,7 +8,7 @@ using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.TestUtilities;
 using Xunit;
 
-namespace HelloWorld.Tests
+namespace PutCount.Tests
 {
     public class FunctionTest
     {
