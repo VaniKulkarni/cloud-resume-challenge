@@ -1,17 +1,23 @@
 name: Build and deploy infra
 
 on:
+  push:
+    branches:
+      - main
+      - "releases/**"
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Setup AWS SAM to build and deploy infra'
+        description: "Setup AWS SAM to build and deploy infra"
         required: true
-        default: 'dev'
+        default: "dev"
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - id: testLocalAction
+        uses: ./
       - name: Setup .NET 6
         uses: actions/setup-dotnet@v3
         with:
@@ -25,6 +31,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
       # Build inside Docker containers
-      - run: sam build 
+      - run: sam build
       # Prevent prompts and failure when the stack is unchanged
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
