@@ -26,7 +26,7 @@ jobs:
           aws-region: us-east-2
       # Build inside Docker containers
       - run: sam build
-        working-directory: ${{ github.workspace }}
+        working-directory: ./
       # Prevent prompts and failure when the stack is unchanged
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
-        working-directory: ${{ github.workspace }}
+        working-directory: ./
