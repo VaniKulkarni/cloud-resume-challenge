@@ -25,7 +25,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
       # Build inside Docker containers
-      - run: sam build --use-container
+      - run: sam build
       # Prevent prompts and failure when the stack is unchanged
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
 
@@ -40,7 +40,7 @@ jobs:
         with:
           args: --delete
         env:
-          AWS_S3_BUCKET: s3://first-cloud-resume
+          AWS_S3_BUCKET: arn:aws:s3:::first-cloud-resume
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           SOURCE_DIR: frontend
