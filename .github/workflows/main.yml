@@ -45,6 +45,6 @@ jobs:
       # Build inside Docker containers  --use-container --mount-with WRITE
       - name: SAM Build
         run: |
-          sam build
+          sam build --debug
       # Prevent prompts and failure when the stack is unchanged
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
