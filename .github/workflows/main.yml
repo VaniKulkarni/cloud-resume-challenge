@@ -22,6 +22,18 @@ jobs:
           echo ${{ github.workspace }}
           echo $GITHUB_WORKSPACE
       - uses: actions/setup-python@v4
+      - name: Setup .NET 6
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 6.x
+      - name: Display dotnet version
+        run: dotnet --version
+      - name: Restore dependencies
+        working-directory: ./src/backend/put-count
+        run: dotnet restore
+      - name: Build
+        working-directory: ./src/backend/put-count
+        run: dotnet build --no-restore
       - uses: aws-actions/setup-sam@v2
         with:
           use-installer: true
