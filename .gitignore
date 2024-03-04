@@ -408,3 +408,4 @@ __pycache__/
 /*.sln
 /*.toml
 /src/resume-site/package-lock.json
+/frontend/package-lock.json
