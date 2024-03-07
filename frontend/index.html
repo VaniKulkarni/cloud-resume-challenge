@@ -3,45 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume</title>
+    <title>Your Resume</title>
     <link rel="stylesheet" href="styles.css" />
-    <script>
-      fetch(
-        "https://pm4bzwzn80.execute-api.us-east-1.amazonaws.com/Prod/putcount"
-      )
-        // .then(() =>
-        //   fetch(
-        //     "https://pm4bzwzn80.execute-api.us-east-1.amazonaws.com/Prod/getcount"
-        //   )
-        // )
-        .then((response) => response.json())
-        .then(
-          (data) =>
-            (document.getElementById("VisitorsGetCount").innerText = data.count)
-        );
-    </script>
   </head>
   <body>
-    <header>
-      <h1>Vani Kulkarni</h1>
-      <p>Synopsis</p>
-      <span id="VisitorsGetCount"> VisitorsCount here</span>
-    </header>
-    <section>
-      <h2>Roles and Responsibilities</h2>
-      <ul>
-        <li>Role 1</li>
-        <li>Role 2</li>
-        <li>Role 3</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Project Details</h2>
-      <ul>
-        <li>Project 1</li>
-        <li>Project 2</li>
-        <li>Project 3</li>
-      </ul>
-    </section>
+    <script src="script.js"></script>
+
+    <script>
+      window.onload = function () {
+        getVisitorsCount();
+      };
+    </script>
+    <div class="banner">
+      <h1>Your Name</h1>
+      <p>IT Solutions Architect</p>
+    </div>
+    <div class="resume-container">
+      <div class="left-column">
+        <img
+          src="your-profile-image.jpg"
+          alt="Profile Image"
+          class="profile-image"
+        />
+        <div class="details">
+          <p>Email: your@email.com</p>
+          <p>Phone: +1 123-456-7890</p>
+          <!-- Add other contact details -->
+        </div>
+      </div>
+      <div class="right-column">
+        <h2>Synopsis</h2>
+        <p>
+          Experienced IT Solutions Architect with 17 years in the industry.
+          Skilled in designing and implementing robust solutions for complex
+          business challenges. Proven track record of successful project
+          delivery and team leadership.
+        </p>
+        <!-- Add other sections (e.g., experience, education) -->
+
+        <div class="project-details">
+          <h2>Key Projects</h2>
+          <ul>
+            <li>
+              Project A: Led the migration of legacy systems to a modern
+              cloud-based architecture, resulting in improved scalability and
+              cost savings.
+            </li>
+            <li>
+              Project B: Designed and implemented a real-time data analytics
+              platform for a Fortune 500 client, enhancing decision-making
+              capabilities.
+            </li>
+            <!-- Add more project details -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      Visitor Count: <span id="VisitorsGetCount">Loading...</span>
+    </div>
   </body>
 </html>
