@@ -13,7 +13,7 @@ Resources:
   S3Bucket:
     Type: "AWS::S3::Bucket"
     Properties:
-      BucketName: first-cloud-resume
+      BucketName: vani.kulkarnisworklife.uk
       PublicAccessBlockConfiguration:
         BlockPublicAcls: false
       OwnershipControls:
@@ -61,7 +61,7 @@ Resources:
           ForwardedValues:
             QueryString: false
         Origins:
-          - DomainName: first-cloud-resume.s3-website-us-east-1.amazonaws.com
+          - DomainName: vani.kulkarnisworklife.uk.s3-website-us-east-1.amazonaws.com
             Id: myS3Bucket
             CustomOriginConfig:
               OriginProtocolPolicy: match-viewer

@@ -13,5 +13,5 @@ deploy-steps:
 	sam init
 	sam build
 	sam deploy 
-	aws s3 sync ./frontend s3://first-cloud-resume
-	aws s3 rm s3://first-cloud-resume --recursive
+	aws s3 sync ./frontend s3://vani.kulkarnisworklife.uk
+	aws s3 rm s3://vani.kulkarnisworklife.uk --recursive
