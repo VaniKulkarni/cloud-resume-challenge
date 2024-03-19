@@ -1,11 +1,10 @@
-# More information about the configuration file can be found here:
+#  More information about the configuration file can be found here:
 # https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-config.html
 version = 0.1
 
 [default]
 [default.global.parameters]
 stack_name = "cloud-resume-challenge"
-MyRoute53RecordSet_HostedZoneId = "Z2FDTNDATAQYW2"
 MY_DOMAIN_NAME= "vanisworklife.com"
 
 [default.build.parameters]

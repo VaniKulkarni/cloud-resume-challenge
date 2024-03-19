@@ -52,6 +52,15 @@ Edit template.yaml file
 
 The application template uses AWS Serverless Application Model (AWS SAM) to define application resources. AWS SAM is an extension of AWS CloudFormation with a simpler syntax for configuring common serverless application resources such as functions, triggers, and APIs. For resources not included in [the SAM specification](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md), you can use standard [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html) resource types.
 
+## How is Cloudflare setup done
+
+Cloudflare is used for domain registration, content delivery network (CDN), and SSL certificate provisioning.
+
+While it offers secure HTTPS connections between users and its servers, the connection between Cloudflare and S3 (e.g., for hosting a website) isn't encrypted.
+This setup, commonly used with CNAME records in Cloudflare, provides security for user traffic but not for data transmission between Cloudflare and S3.
+
+[Reference](https://advancedweb.hu/how-to-add-https-for-an-s3-bucket-website-with-cloudflare/)
+
 ## To run Cypress E2E tests locally
 
 Tests are defined in the `test` folder in this project.
