@@ -1,10 +1,10 @@
-describe("S3 statis website should block public access", () => {
+describe("Access to S3 static website should return 403 forbidden error and block direct public access", () => {
   it("Gets, types and asserts", () => {
     cy.visit(
       "http://vani.kulkarnisworklife.uk.s3-website-us-east-1.amazonaws.com"
-    );
-
-    cy.contains("403 Forbidden").should("exist");
+    ).then((response) => {
+      expect(response.status).to.eq(403);
+    });
     // cy.contains("VisitorsGetCount").should("exist");
     // cy.get("#VisitorsGetCount").should("be.gt", 0);
     // cy.get('[id*="VisitorsGetCount"]').should("be.gt", 0);
@@ -21,7 +21,7 @@ describe("S3 statis website should block public access", () => {
   });
 });
 
-describe("Cloudflare should be able redirect to s3 website", () => {
+describe("https Cloudflare should be able redirect to s3 website", () => {
   it("Gets, types and asserts", () => {
     cy.visit("https://vani.kulkarnisworklife.uk");
 
@@ -42,7 +42,7 @@ describe("Cloudflare should be able redirect to s3 website", () => {
   });
 });
 
-describe("Returns an updated value from database", () => {
+describe("Fetch visitors count using aws lambda from database", () => {
   it("fetches visitorCount", () => {
     cy.request(
       "https://pm4bzwzn80.execute-api.us-east-1.amazonaws.com/Prod/putcount"
