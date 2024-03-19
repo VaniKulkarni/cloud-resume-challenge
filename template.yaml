@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  Sample SAM Template for cloud-resume-challenge
+  SAM Template for cloud-resume-challenge
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
@@ -66,12 +66,6 @@ Resources:
               }
       Bucket: !Ref S3Bucket
 
-  # MyACMCertificate:
-  #   Type: AWS::CertificateManager::Certificate
-  #   Properties:
-  #     DomainName: vanisworklife.com
-  #     ValidationMethod: DNS
-
   CloudFrontDistribution:
     Type: "AWS::CloudFront::Distribution"
     Properties:
@@ -118,15 +112,6 @@ Resources:
           KeyType: HASH
       BillingMode: PAY_PER_REQUEST
 
-  # S3BucketSecureURL:
-  #   Value: !Join
-  #     - ''
-  #     - - 'https://'
-  #       - !GetAtt
-  #         - S3Bucket
-  #         - DomainName
-  #   Description: Name of S3 bucket to hold website content
-
   MyPutCountLambda:
     Type: AWS::Serverless::Function
     # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
@@ -149,29 +134,6 @@ Resources:
           Properties:
             Path: /putcount
             Method: get
-
-  # MyGetCountLambda:
-  #   Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-  #   Properties:
-  #     CodeUri: ./src/backend/Get-Count/
-  #     Handler: GetCount::GetCount.Function::FunctionHandler
-  #     Runtime: dotnet6
-  #     Policies:
-  #       - DynamoDBCrudPolicy:
-  #           TableName: Cloud-Resume-Challenge
-  #     Architectures:
-  #       - x86_64
-  #     MemorySize: 256
-  #     Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
-  #       Variables:
-  #         PARAM1: VALUE
-  #     Events:
-  #       GetCount:
-  #         Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
-  #         Properties:
-  #           Path: /getcount
-  #           Method: get
-
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
   # Find out more about other implicit resources you can reference within SAM
