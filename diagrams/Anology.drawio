@@ -1,0 +1,54 @@
+<mxfile host="app.diagrams.net" modified="2024-03-21T19:24:24.335Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="__v7s3M3LPLDGeuDudwd" version="24.0.7" type="github">
+  <diagram name="Page-1" id="djTFn1rMKZLEOP3nn3cO">
+    <mxGraphModel dx="976" dy="461" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Dp0KTcxAw_2mCmmn89O_-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="HvTbSzE2H_pUVu9utpAQ-1" target="HvTbSzE2H_pUVu9utpAQ-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="284" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HvTbSzE2H_pUVu9utpAQ-1" value="Tourist" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=13;image=img/lib/azure2/general/Browser.svg;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="130" y="223" width="65" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="Dp0KTcxAw_2mCmmn89O_-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HvTbSzE2H_pUVu9utpAQ-3" target="HvTbSzE2H_pUVu9utpAQ-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HvTbSzE2H_pUVu9utpAQ-3" value="Cloudflare- Search Destination on Google Map" style="swimlane;whiteSpace=wrap;html=1;fontStyle=1;fontSize=13;startSize=80;" parent="1" vertex="1">
+          <mxGeometry x="290" y="85" width="90" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="Dp0KTcxAw_2mCmmn89O_-14" value="Map&amp;nbsp;&lt;div&gt;Data&amp;nbsp;&lt;/div&gt;&lt;div&gt;Nearby&lt;/div&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#8C4FFF;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=13;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudfront;" vertex="1" parent="HvTbSzE2H_pUVu9utpAQ-3">
+          <mxGeometry x="15" y="211" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Dp0KTcxAw_2mCmmn89O_-13" value="Enter&amp;nbsp;&lt;div&gt;Destination&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=13;image=img/lib/azure2/networking/DNS_Zones.svg;fontStyle=1" vertex="1" parent="HvTbSzE2H_pUVu9utpAQ-3">
+          <mxGeometry x="15" y="98.75" width="64" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="Gi_CP5u-w4kTXD4d9gNs-41" value="AWS- Explore City" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="110" width="400" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="HvTbSzE2H_pUVu9utpAQ-11" value="Information&amp;nbsp;&lt;div&gt;Desk&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.api_gateway;fillColor=#D9A741;gradientColor=none;strokeColor=default;fontFamily=Helvetica;fontSize=13;fontColor=default;fontStyle=1" parent="Gi_CP5u-w4kTXD4d9gNs-41" vertex="1">
+          <mxGeometry x="135" y="115" width="48" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Gi_CP5u-w4kTXD4d9gNs-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="Gi_CP5u-w4kTXD4d9gNs-41" source="HvTbSzE2H_pUVu9utpAQ-12" target="HvTbSzE2H_pUVu9utpAQ-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HvTbSzE2H_pUVu9utpAQ-12" value="Tourist&amp;nbsp;&lt;div&gt;Guide&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#F58534;gradientColor=none;strokeColor=default;fontFamily=Helvetica;fontSize=13;fontColor=default;fontStyle=1" parent="Gi_CP5u-w4kTXD4d9gNs-41" vertex="1">
+          <mxGeometry x="240" y="120" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Gi_CP5u-w4kTXD4d9gNs-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;fontStyle=1" parent="Gi_CP5u-w4kTXD4d9gNs-41" source="HvTbSzE2H_pUVu9utpAQ-11" target="HvTbSzE2H_pUVu9utpAQ-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HvTbSzE2H_pUVu9utpAQ-9" value="Visitor&lt;div&gt;Center&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.dynamo_db;fillColor=#2E73B8;gradientColor=none;strokeColor=default;fontFamily=Helvetica;fontSize=13;fontColor=default;fontStyle=1" parent="Gi_CP5u-w4kTXD4d9gNs-41" vertex="1">
+          <mxGeometry x="340" y="113.75" width="40" height="52.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Dp0KTcxAw_2mCmmn89O_-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Gi_CP5u-w4kTXD4d9gNs-41" source="HvTbSzE2H_pUVu9utpAQ-8" target="HvTbSzE2H_pUVu9utpAQ-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HvTbSzE2H_pUVu9utpAQ-8" value="City Entry" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=13;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.s3;fontFamily=Helvetica;" parent="Gi_CP5u-w4kTXD4d9gNs-41" vertex="1">
+          <mxGeometry x="10" y="92.5" width="60" height="95" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
