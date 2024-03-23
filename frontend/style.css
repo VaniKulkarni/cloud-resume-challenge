@@ -1,0 +1,226 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #16315a;
+  background-color: #9ba9be;
+  padding-top: 15vh;
+}
+
+html,
+body {
+  font-family: "Source Sans Pro Topnav", sans-serif !important;
+}
+
+p {
+  margin: 0;
+  padding: 2px;
+  font-size: 1rem;
+  text-align: left;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+nav a {
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+a:link {
+  color: #16315a;
+}
+
+a:visited {
+  color: chocolate;
+}
+
+a:hover {
+  color: #0f097f;
+}
+
+img {
+  max-width: 50%;
+  width: 50%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+h2 {
+  padding-bottom: 20px;
+}
+
+h2,
+.sideNavItem {
+  text-transform: uppercase;
+}
+
+h5 {
+  background: #0f097f;
+  color: white !important;
+}
+/* h3,
+h4 {
+  font-style: italic;
+} */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  display: none; /* Hide all cards by default */
+  transition: opacity 5s ease-in-out;
+  margin: auto;
+  overflow: auto;
+}
+
+.card-title {
+  font-size: 3vw;
+}
+
+.card-body h3 {
+  font-size: 2.25vw;
+}
+
+.card-body h4 {
+  font-size: 2vw;
+}
+
+.card-body {
+  font-size: 1.5vw;
+  max-height: 100%;
+}
+
+.card-body a {
+  font-size: 1.5vw;
+}
+
+.img-fluid-min {
+  min-width: 130px !important;
+}
+
+.sideNavItem {
+  margin: 1.8vw 0;
+  padding: 5px;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.sideNavItemSelected {
+  text-decoration: underline;
+  color: #0f097f;
+}
+
+.sideNavItem a {
+  color: white;
+  text-decoration: none;
+}
+
+.sideNavItem a:hover {
+  color: #0f097f;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.column {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.separator {
+  padding: 0;
+  margin: 0;
+}
+
+.centerContent {
+  text-align: center;
+}
+
+.listSpace {
+  margin-bottom: 15px;
+}
+
+.skillList {
+  margin-bottom: 20px !important;
+}
+
+.socialLinks {
+  vertical-align: middle;
+}
+
+#cloudResumeBody {
+  background-image: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+#expList {
+  list-style: outside;
+  font-size: 95%;
+}
+
+@media (max-width: 1000px) {
+  body {
+    padding-top: 20px;
+  }
+
+  li {
+    font-size: 1rem !important;
+    text-align: left;
+  }
+
+  p,
+  a {
+    font-size: 1rem !important;
+    padding: 0;
+  }
+
+  h3 {
+    font-size: 2rem !important;
+  }
+
+  h4 {
+    font-size: 1.5rem !important;
+  }
+
+  .card {
+    min-height: 300px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-title {
+    font-size: 2.5rem;
+  }
+
+  .col-7,
+  .col-md-6 {
+    width: 100% !important;
+  }
+}
+
+.fa {
+  font-size: 15px !important;
+}
+
+.checked {
+  color: blue;
+}
