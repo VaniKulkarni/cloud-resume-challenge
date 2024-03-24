@@ -5,12 +5,12 @@ html {
 body {
   color: #16315a;
   background-color: #9ba9be;
-  padding-top: 15vh;
 }
 
 html,
 body {
-  font-family: "Source Sans Pro Topnav", sans-serif !important;
+  font-family: "Arial, Helvetica, sans-serif;";
+  /* font-family: "Source Sans Pro Topnav", sans-serif !important; */
 }
 
 p {
@@ -18,18 +18,6 @@ p {
   padding: 2px;
   font-size: 1rem;
   text-align: left;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-}
-
-nav a {
-  text-decoration: underline;
-  margin-left: 10px;
 }
 
 a:link {
@@ -41,14 +29,14 @@ a:visited {
 }
 
 a:hover {
-  color: #0f097f;
+  color: chocolate;
 }
 
 img {
   max-width: 50%;
   width: 50%;
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 h2 {
@@ -61,10 +49,12 @@ h2,
 }
 
 h5 {
-  background: #0f097f;
+  background: #313135;
   color: white !important;
 }
-/* h3,
+
+/*
+ h3,
 h4 {
   font-style: italic;
 } */
@@ -84,19 +74,27 @@ ul {
 
 .card-title {
   font-size: 3vw;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .card-body h3 {
   font-size: 2.25vw;
+  background: #335384 !important;
+  color: white !important;
 }
 
 .card-body h4 {
   font-size: 2vw;
+  background: #335384 !important;
+  color: white !important;
 }
 
 .card-body {
   font-size: 1.5vw;
   max-height: 100%;
+  background: #335384 !important;
+  color: white !important;
 }
 
 .card-body a {
@@ -104,7 +102,7 @@ ul {
 }
 
 .img-fluid-min {
-  min-width: 130px !important;
+  min-width: 120px !important;
 }
 
 .sideNavItem {
@@ -155,10 +153,13 @@ ul {
 
 .skillList {
   margin-bottom: 20px !important;
+  text-align: left;
 }
 
 .socialLinks {
   vertical-align: middle;
+  font-size: 1vw;
+  color: antiquewhite !important;
 }
 
 #cloudResumeBody {
@@ -169,6 +170,12 @@ ul {
   );
 }
 
+li {
+  font-size: 1rem !important;
+  text-align: left;
+  margin: 5px;
+}
+
 #expList {
   list-style: outside;
   font-size: 95%;
@@ -176,7 +183,7 @@ ul {
 
 @media (max-width: 1000px) {
   body {
-    padding-top: 20px;
+    padding-top: 2px;
   }
 
   li {
@@ -218,9 +225,10 @@ ul {
 }
 
 .fa {
-  font-size: 15px !important;
+  font-size: 10px !important;
+  color: lightskyblue;
 }
 
 .checked {
-  color: blue;
+  color: yellowgreen;
 }

@@ -7,7 +7,6 @@
     <!-- JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
-    <script src="https://cdn.credly.com/assets/utilities/embed.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -17,10 +16,7 @@
       rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    
 
     <!-- Bootstrap Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -30,54 +26,18 @@
     <meta name="author" content="Vani Kulkarni" />
     <meta
       name="description"
-      content="Final Website for the Cloud Resume Challenge"
+      content="Website for the Cloud Resume Challenge"
     />
     <meta name="robots" content="all" />
   </head>
   <body id="cloudResumeBody">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-green bg-primary fixed-top">
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="sideNavItem" id="defaultItem">
-              <a href="#profileSection">Profile</a>
-            </li>
-            <li class="sideNavItem">
-              <a href="#experienceSection">Experience</a>
-            </li>
-            <li class="sideNavItem">
-              <a href="#educationSection">Education</a>
-            </li>
-            <li class="sideNavItem">
-              <a href="#certificationsSection">Certifications</a>
-            </li>
-            <li class="sideNavItem"><a href="#miscSection">Misc</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
     <!-- About -->
     <div class="container mt-5">
       <div class="card centerContent" id="profileSection">
         <div class="card-header">
-          <h3 class="card-title">Vani Kulkarni</h3>
-          <h6>Bachelor of Engineering in Computer Science</h6>
+          <h3 class="card-title">VANI KULKARNI</h3>
+          <h6>IT SOLUTIONS ARCHITECT</h6>
+          <h7>Bachelor of Engineering in Computer Science</h7>
         </div>
         <div class="card-body">
           <div class="row">
@@ -87,6 +47,24 @@
                 class="img-fluid img-fluid-min rounded-circle"
                 alt="Vani Kulkarni"
               />
+              <br />
+              
+              <div class="row">
+                <a
+                  class="socialLinks"
+                  href="https://www.linkedin.com/in/vani-kulkarni-architect/"
+                  target="_blank"
+                  >LinkedIn</a
+                >
+
+                <a
+                  class="socialLinks"
+                  href="https://github.com/VaniKulkarni"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+
               <br />
             </div>
             <div class="col-7 justify-content-center">
@@ -106,13 +84,14 @@
             <div class="row">
               <div class="col-md-5">
                 <h3>Skills Summary</h3>
+                <hr>
                 <ul class="list-group skillList">
                   <li>
                     <span class="fa fa-circle checked"></span>
                     <span class="fa fa-circle checked"></span>
                     <span class="fa fa-circle checked"></span>
                     <span class="fa fa-circle checked"></span>
-                    IT Solutions Architect
+                   <span id="skillItem">IT Solutions Architect</span>
                   </li>
                   <li>
                     <span class="fa fa-circle checked"></span>
@@ -143,11 +122,11 @@
                     <span class="fa fa-circle"></span>
                     Performance Improvement
                   </li>
-                  <li>Angular</li>
                 </ul>
               </div>
               <div class="col-md-3">
                 <h3>Certifications</h3>
+                <hr>
                 <div class="row">
                   <div class="col-md-6">
                     <a
@@ -171,31 +150,11 @@
                     </a>
                   </div>
                 </div>
-                <h3>Contact Me</h3>
-                <div>
-                  <a
-                    class="socialLinks"
-                    href="mailto:vanikulkarnister@gmail.com"
-                    target="_blank"
-                    >Email</a
-                  >
-                  <a
-                    class="socialLinks"
-                    href="https://www.linkedin.com/in/vani-kulkarni-architect/"
-                    target="_blank"
-                    >LinkedIn</a
-                  >
+            </div>
 
-                  <a
-                    class="socialLinks"
-                    href="https://github.com/VaniKulkarni"
-                    target="_blank"
-                    >GitHub</a
-                  >
-                </div>
-              </div>
               <div class="col-md-4">
                 <h3>Passionate About</h3>
+                <hr>
                 <ul class="list-group skillList">
                   <li>Software Technology</li>
                   <li>Cloud Computing</li>
@@ -203,10 +162,136 @@
                   <li>Cooking</li>
                 </ul>
               </div>
-            </div>
           </div>
         </div>
         <h5 id="visitors-count"></h5>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="container mt-5">
+      <div class="card centerContent" id="experienceSection">
+        <div class="card-header">
+          <h2 class="card-title">Experience</h2>
+        </div>
+        <div class="card-body">
+          <h3>DevOps Architect</h3>
+          <h4>FIS | Oct 2022 - Aug 2023</h4>
+          <p class="separator">
+            ----------------------------------------------
+          </p>
+          <ul id="expList">
+            <li class="listSpace">
+              Design VM based deployment strategy for Low Code tool Flowable to
+              integrate with Microservices Application
+            </li>
+            <li class="listSpace">
+              Design CD Pipeline solution via Harness for microservices
+              application
+            </li>
+            <li class="listSpace">
+              Develop OpenTelemetry based solution to export Traces, Logs and
+              Metrics into Azure Application Insights and Kibana.
+            </li>
+            <li class="listSpace">
+              Develop scripts to automate deployment of Helm Charts on Azure
+              Cloud via Harness
+            </li>
+            <li class="listSpace">
+              Create deployment architecture of .NET Core based Microservices on
+              2 different deployment models. 1. Azure VM based non-containerized
+              deployment 2. Azure Kubernetes Service based containerized
+              deployment.
+            </li>
+            <li class="listSpace">
+              Setup utility services such as Redis, RabbitMQ and Elasticsearch
+              in clustered mode for High Availability, Resilience
+            </li>
+            <li class="listSpace">
+              Setup secured TLS communication amongst utility services and
+              microservices application.
+            </li>
+            <li class="listSpace">
+              Using Azure Well Architected Farmwork design Azure based
+              deployment strategy for Low Code tool Flowable to integrate with
+              Microservices Application that uses utility services.
+            </li>
+            <li class="listSpace">Create helm charts for microservices.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="container mt-5">
+      <div class="card centerContent" id="educationSection">
+        <div class="card-header">
+          <h2 class="card-title">Education</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Southern Methodist University</h3>
+              <h3>2023 - 2025</h3>
+              <p class="separator">~</p>
+              <h4>Master of Science</h4>
+              <p class="separator">~</p>
+              <p>Major: Network Engineering</p>
+              <p>Emphasis: Cloud Engineering</p>
+              <p>Lyle Graduate Leadership Certification Program</p>
+            </div>
+            <div class="col-md-6">
+              <h3>Oklahoma Christian University</h3>
+              <h3>2019 - 2023</h3>
+              <p class="separator">~</p>
+              <h4>Bachelor of Science</h4>
+              <p class="separator">~</p>
+              <p>Major: Computer Engineering</p>
+              <p>Emphasis: Software Engineering</p>
+              <p>President of Kappa Sigma Tau Social Service Club</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="container mt-5">
+      <div class="card centerContent" id="certificationsSection">
+        <div class="card-header">
+          <h2 class="card-title">Certifications</h2>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li>None at the moment, but just wait...</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Misc -->
+    <div class="container mt-5">
+      <div class="card centerContent" id="miscSection">
+        <div class="card-header">
+          <h2 class="card-title">Miscellaneous</h2>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li>
+              <a
+                href="https://pigeonhole.substack.com/s/the-cloud-resume-challenge"
+                target="_blank"
+                >How This Website Came to Be</a
+              >
+            </li>
+            <br />
+            <li>
+              <a href="https://pigeonhole.substack.com/" target="_blank"
+                >Further Reading From My Personal Blog</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>
