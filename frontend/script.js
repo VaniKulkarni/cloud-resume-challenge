@@ -46,8 +46,6 @@ $(document).ready(function () {
 
   // Default card to show on page load
   showCard("profileSection");
-  var defaultSection = document.getElementById("defaultItem");
-  defaultSection.classList.add("sideNavItemSelected");
   getVisitorsCount();
 
   // Navigation click behavior
