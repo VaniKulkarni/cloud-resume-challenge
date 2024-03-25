@@ -30,8 +30,8 @@ describe("https Cloudflare should be able redirect to s3 website", () => {
   it("Gets, types and asserts", () => {
     cy.visit("https://vani.kulkarnisworklife.uk");
 
-    cy.contains("Synopsis").should("exist");
-    cy.contains("Visitor Count: ").should("exist");
+    cy.contains("Certifications").should("exist");
+    cy.contains("This resume has been visited").should("exist");
     // cy.get("#VisitorsGetCount").should("be.gt", 0);
     // cy.get('[id*="VisitorsGetCount"]').should("be.gt", 0);
     // Should be on a new URL which
