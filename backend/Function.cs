@@ -29,7 +29,7 @@ namespace PutCount
         {
             { "Access-Control-Allow-Headers", "Content-Type,Authorization" },
             { "Access-Control-Allow-Origin", "https://vani.kulkarnisworklife.uk" },
-            { "Access-Control-Allow-Methods", "*" },
+            { "Access-Control-Allow-Methods", "GET" },
             { "Access-Control-Allow-Credentials", "*" }
         };
 
