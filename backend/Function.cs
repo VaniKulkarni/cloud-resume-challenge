@@ -28,7 +28,7 @@ namespace PutCount
         public static Dictionary<string, string> ALL_HEADERS = new Dictionary<string, string>()
         {
             { "Access-Control-Allow-Headers", "Content-Type,Authorization" },
-            { "Access-Control-Allow-Origin", "*" },
+            { "Access-Control-Allow-Origin", "https://vani.kulkarnisworklife.uk" },
             { "Access-Control-Allow-Methods", "*" },
             { "Access-Control-Allow-Credentials", "*" }
         };
